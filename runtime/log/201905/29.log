@@ -1,0 +1,1949 @@
+---------------------------------------------------------------
+[ 2019-05-29T13:57:27+08:00 ] 116.237.221.55 POST robot.xlove99.top/api/card/barragechange
+[运行时间：0.030375s] [吞吐率：32.92req/s] [内存消耗：2,815.55kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000757s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'card',
+    2 => 'barragechange',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; uid=1000367; token=8d539a54-4793-4930-960c-63470c8d2fd7; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://robot.xlove99.top/index/user/usercard.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://robot.xlove99.top',
+  'accept' => '*/*',
+  'content-length' => '50',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+)
+[ info ] [ PARAM ] array (
+  'card_no' => '1c8db275157a61b02d0423269be28e6251fbc50690',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001187s ]
+[ info ] [ RUN ] app\api\controller\Card->barrageChange[ /www/wwwroot/robot/application/api/controller/Card.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000500s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000925s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_card` WHERE  `card_no` = '1c8db275157a61b02d0423269be28e6251fbc50690' LIMIT 1 [ RunTime:0.000665s ]
+[ sql ] [ SQL ] UPDATE `fa_card`  SET `is_barrage`='1'  WHERE  `card_no` = '1c8db275157a61b02d0423269be28e6251fbc50690' [ RunTime:0.003476s ]
+---------------------------------------------------------------
+[ 2019-05-29T13:57:27+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/usercard.html
+[运行时间：0.037548s] [吞吐率：26.63req/s] [内存消耗：3,697.13kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000752s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'usercard',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; uid=1000367; token=8d539a54-4793-4930-960c-63470c8d2fd7; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/usercard.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001138s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->usercard[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/usercard.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'usercards',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000564s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2e2e6e154225151533faf8158d5a54ff04fdcfaf' LIMIT 1 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000996s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_card` WHERE  `userid` = 1000367 [ RunTime:0.000707s ]
+---------------------------------------------------------------
+[ 2019-05-29T13:57:27+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109447
+[运行时间：0.033010s] [吞吐率：30.29req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000718s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; uid=1000367; token=8d539a54-4793-4930-960c-63470c8d2fd7; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/usercard.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109447',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001197s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000646s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000724s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2e2e6e154225151533faf8158d5a54ff04fdcfaf' LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000813s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000476s ]
+---------------------------------------------------------------
+[ 2019-05-29T13:58:36+08:00 ] 180.106.242.125 POST robot.xlove99.top/api/card/check
+[运行时间：0.035755s] [吞吐率：27.97req/s] [内存消耗：2,868.92kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000778s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'card',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://www.hongle.tv/188354309',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'origin' => 'https://www.hongle.tv',
+  'accept' => '*/*',
+  'content-length' => '44',
+  'host' => 'robot.xlove99.top',
+)
+[ info ] [ PARAM ] array (
+  'c' => '2b2b12715ead667580e30f11c532017b9b6242dc65',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001253s ]
+[ info ] [ RUN ] app\api\controller\Card->check[ /www/wwwroot/robot/application/api/controller/Card.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000540s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000921s ]
+[ sql ] [ SQL ] SELECT `userid`,`card_no`,`bind_host`,`expire_time`,`is_barrage`,`is_active`,`last_day`,`times` FROM `fa_card` WHERE  `card_no` = '2b2b12715ead667580e30f11c532017b9b6242dc65' LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] UPDATE `fa_card`  SET `times`=4  WHERE  `card_no` = '2b2b12715ead667580e30f11c532017b9b6242dc65' [ RunTime:0.007639s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_response` [ RunTime:0.000882s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_response` WHERE  `userid` = 1000102 [ RunTime:0.000649s ]
+---------------------------------------------------------------
+[ 2019-05-29T13:59:18+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/logout.html
+[运行时间：0.040567s] [吞吐率：24.65req/s] [内存消耗：3,645.99kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000867s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; uid=1000367; token=8d539a54-4793-4930-960c-63470c8d2fd7; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/usercard.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001269s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->logout[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ BEHAVIOR ] Run Closure @user_logout_successed [ RunTime:0.000038s ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'code',
+  4 => 'msg',
+  5 => 'data',
+  6 => 'url',
+  7 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000582s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000712s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2e2e6e154225151533faf8158d5a54ff04fdcfaf' LIMIT 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000917s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] DELETE FROM `fa_user_token`    WHERE  `token` = '2e2e6e154225151533faf8158d5a54ff04fdcfaf' [ RunTime:0.004340s ]
+---------------------------------------------------------------
+[ 2019-05-29T13:59:22+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/index.html
+[运行时间：0.033056s] [吞吐率：30.25req/s] [内存消耗：3,303.70kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000778s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/logout.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001281s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000616s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000738s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000323s ]
+---------------------------------------------------------------
+[ 2019-05-29T13:59:25+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/login.html
+[运行时间：0.025425s] [吞吐率：39.33req/s] [内存消耗：2,895.25kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000728s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001140s ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->login[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/login.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-29T13:59:25+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109565
+[运行时间：0.028853s] [吞吐率：34.66req/s] [内存消耗：2,791.91kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000906s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/login.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109565',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001394s ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-29T14:00:15+08:00 ] 116.237.221.55 POST robot.xlove99.top/index/user/login.html
+[运行时间：0.041285s] [吞吐率：24.22req/s] [内存消耗：3,679.42kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000779s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://robot.xlove99.top/index/user/login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://robot.xlove99.top',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '141',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://robot.xlove99.top/index/user/index.html',
+  '__token__' => 'b00041336721643548eb9bf21814b0e8',
+  'account' => '15618719205',
+  'password' => 'aa1111',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001177s ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->login[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ BEHAVIOR ] Run Closure @user_login_successed [ RunTime:0.000060s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000454s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000800s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '15618719205' LIMIT 1 [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000309s ]
+[ sql ] [ SQL ] UPDATE `fa_user`  SET `logintime`=1559109615,`updatetime`=1559109615  WHERE  `id` = 1000367 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000674s ]
+[ sql ] [ SQL ] INSERT INTO `fa_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('11c8d99676f036b192c79c30fd883cd26ca30cc0' , 1000367 , 1559109615 , 1561701615) [ RunTime:0.000302s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:16+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/index.html
+[运行时间：0.037609s] [吞吐率：26.59req/s] [内存消耗：3,705.00kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000726s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001305s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->index[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000679s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000743s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000799s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000427s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:17+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109616
+[运行时间：0.036384s] [吞吐率：27.48req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000735s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109616',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001167s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000582s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000800s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001036s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000532s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:21+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/usercard.html
+[运行时间：0.038437s] [吞吐率：26.02req/s] [内存消耗：3,696.42kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000770s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'usercard',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001227s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->usercard[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/usercard.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'usercards',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000578s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000845s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_card` WHERE  `userid` = 1000367 [ RunTime:0.000499s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:21+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109621
+[运行时间：0.033170s] [吞吐率：30.15req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000749s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/usercard.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109621',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001284s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000449s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000379s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:26+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/profile.html
+[运行时间：0.040121s] [吞吐率：24.92req/s] [内存消耗：3,716.42kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000799s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'profile',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/usercard.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001211s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->profile[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/profile.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000748s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001115s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000457s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:26+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109625
+[运行时间：0.032877s] [吞吐率：30.42req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000758s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/profile.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109625',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001145s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000618s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000947s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000440s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:29+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/index.html
+[运行时间：0.035085s] [吞吐率：28.50req/s] [内存消耗：3,705.00kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000733s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/profile.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001196s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->index[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000574s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000839s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000379s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:30+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109629
+[运行时间：0.034854s] [吞吐率：28.69req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000766s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109629',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001332s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000449s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000649s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000968s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000577s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:31+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/response.html
+[运行时间：0.037019s] [吞吐率：27.01req/s] [内存消耗：3,687.18kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000707s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'response',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001152s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->response[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/response.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'responses',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000564s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000817s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000586s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_response` [ RunTime:0.000871s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_response` WHERE  `userid` = 1000367 [ RunTime:0.000347s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:32+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109631
+[运行时间：0.035155s] [吞吐率：28.45req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000975s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/response.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109631',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001686s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000453s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001137s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000333s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:37+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/responsedel/ids/459
+[运行时间：0.045624s] [吞吐率：21.92req/s] [内存消耗：3,648.52kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000728s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'responsedel',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/response.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'ids' => '459',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001167s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->responsedel[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'code',
+  4 => 'msg',
+  5 => 'data',
+  6 => 'url',
+  7 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000645s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000829s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001031s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_response` [ RunTime:0.000620s ]
+[ sql ] [ SQL ] DELETE FROM `fa_response`    WHERE  `id` = 459 [ RunTime:0.004329s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:40+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/response.html
+[运行时间：0.034702s] [吞吐率：28.82req/s] [内存消耗：3,686.70kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000720s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'response',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/responsedel/ids/459',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001163s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->response[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/response.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'responses',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000540s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000730s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_response` [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_response` WHERE  `userid` = 1000367 [ RunTime:0.000349s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:40+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109640
+[运行时间：0.036947s] [吞吐率：27.07req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000910s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/response.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109640',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001524s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000622s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000797s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000815s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000438s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:43+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/usercard.html
+[运行时间：0.037067s] [吞吐率：26.98req/s] [内存消耗：3,696.42kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000691s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'usercard',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/response.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001113s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->usercard[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/usercard.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'usercards',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000454s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000690s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_card` WHERE  `userid` = 1000367 [ RunTime:0.000506s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:44+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109643
+[运行时间：0.035060s] [吞吐率：28.52req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000715s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/usercard.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109643',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001111s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000535s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000786s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000778s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000383s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:46+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/changepwd.html
+[运行时间：0.037996s] [吞吐率：26.32req/s] [内存消耗：3,706.70kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000853s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'changepwd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/usercard.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001288s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->changepwd[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/changepwd.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000759s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000925s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000599s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:46+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109646
+[运行时间：0.034733s] [吞吐率：28.79req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000723s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/changepwd.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109646',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001475s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000545s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000815s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001108s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000451s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:47+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/profile.html
+[运行时间：0.040845s] [吞吐率：24.48req/s] [内存消耗：3,716.52kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000968s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'profile',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/changepwd.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001417s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->profile[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/profile.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000596s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000996s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000992s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000371s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:48+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109647
+[运行时间：0.033384s] [吞吐率：29.95req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000812s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/profile.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109647',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001153s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000557s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001130s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000541s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:50+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/index.html
+[运行时间：0.036009s] [吞吐率：27.77req/s] [内存消耗：3,705.00kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000756s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/profile.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001213s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->index[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000570s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001032s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001032s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000424s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:00:50+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109650
+[运行时间：0.035483s] [吞吐率：28.18req/s] [内存消耗：3,622.17kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000742s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109650',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001160s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000598s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000796s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000920s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000424s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:02:07+08:00 ] 171.15.157.253 GET robot.xlove99.top/api/card/check
+[运行时间：0.019898s] [吞吐率：50.26req/s] [内存消耗：2,119.57kb] [文件加载：114]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000795s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'card',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001319s ]
+[ info ] [ RUN ] app\api\controller\Card->check[ /www/wwwroot/robot/application/api/controller/Card.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-29T14:02:21+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/logout.html
+[运行时间：0.045397s] [吞吐率：22.03req/s] [内存消耗：3,645.99kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000754s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0; uid=1000367; token=925f93e4-7da5-4102-8793-e90fbaa86f6a',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001450s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->logout[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ BEHAVIOR ] Run Closure @user_logout_successed [ RunTime:0.000041s ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'code',
+  4 => 'msg',
+  5 => 'data',
+  6 => 'url',
+  7 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000652s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001164s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' LIMIT 1 [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001265s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 1000367 LIMIT 1 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] DELETE FROM `fa_user_token`    WHERE  `token` = '11c8d99676f036b192c79c30fd883cd26ca30cc0' [ RunTime:0.003778s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:02:22+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/index.html
+[运行时间：0.031350s] [吞吐率：31.90req/s] [内存消耗：3,303.70kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000740s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/logout.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001208s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000478s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000927s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000405s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:02:25+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/login.html
+[运行时间：0.026687s] [吞吐率：37.47req/s] [内存消耗：2,895.25kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000747s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001203s ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->login[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/login.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-29T14:02:26+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109745
+[运行时间：0.022773s] [吞吐率：43.91req/s] [内存消耗：2,791.91kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000733s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/login.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109745',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001131s ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-29T14:02:27+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/user/register.html?url=http%3A%2F%2Frobot.xlove99.top%2Findex%2Fuser%2Findex.html
+[运行时间：0.025551s] [吞吐率：39.14req/s] [内存消耗：2,894.58kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000726s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => 'http://robot.xlove99.top/index/user/index.html',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001201s ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ /www/wwwroot/robot/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/robot/public/../application/index/view/user/register.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-29T14:02:27+08:00 ] 116.237.221.55 GET robot.xlove99.top/captcha.html
+[运行时间：0.017777s] [吞吐率：56.25req/s] [内存消耗：1,955.65kb] [文件加载：107]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000785s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/register.html?url=http%3A%2F%2Frobot.xlove99.top%2Findex%2Fuser%2Findex.html',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /www/wwwroot/robot/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-29T14:02:28+08:00 ] 116.237.221.55 GET robot.xlove99.top/index/ajax/lang?callback=define&controllername=user&v=1559109747
+[运行时间：0.025555s] [吞吐率：39.13req/s] [内存消耗：2,792.31kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000867s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4m0mbjlmt4gum1nih7mlu19kbd; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://robot.xlove99.top/index/user/register.html?url=http%3A%2F%2Frobot.xlove99.top%2Findex%2Fuser%2Findex.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER',
+  'connection' => 'keep-alive',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1559109747',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001248s ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/robot/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-29T14:02:31+08:00 ] 171.15.157.253 GET robot.xlove99.top/api/card/check
+[运行时间：0.018871s] [吞吐率：52.99req/s] [内存消耗：2,119.57kb] [文件加载：114]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000826s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'card',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'host' => 'robot.xlove99.top',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001296s ]
+[ info ] [ RUN ] app\api\controller\Card->check[ /www/wwwroot/robot/application/api/controller/Card.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-29T14:06:52+08:00 ] 60.16.215.223 POST robot.xlove99.top/api/card/check
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000915s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000820s ]
+[ sql ] [ SQL ] SELECT `userid`,`card_no`,`bind_host`,`expire_time`,`is_barrage`,`is_active`,`last_day`,`times` FROM `fa_card` WHERE  `card_no` = 'ef17527818960f511646c8877bb82a94a2c40b8558' LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] UPDATE `fa_card`  SET `times`=4  WHERE  `card_no` = 'ef17527818960f511646c8877bb82a94a2c40b8558' [ RunTime:0.004408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_response` [ RunTime:0.000920s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_response` WHERE  `userid` = 36545 [ RunTime:0.000310s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:06:52+08:00 ] 60.16.215.223 GET robot.xlove99.top/api/card/getconfig
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000950s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.000803s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_config` WHERE  `group` = 'robot' [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_lvimg` [ RunTime:0.000677s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_lvimg` WHERE  `is_open` = '1' [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_present` [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_present` WHERE  `is_effect` = '是' [ RunTime:0.000585s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:09:30+08:00 ] 60.16.215.223 POST robot.xlove99.top/api/card/check
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000714s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000822s ]
+[ sql ] [ SQL ] SELECT `userid`,`card_no`,`bind_host`,`expire_time`,`is_barrage`,`is_active`,`last_day`,`times` FROM `fa_card` WHERE  `card_no` = 'ef17527818960f511646c8877bb82a94a2c40b8558' LIMIT 1 [ RunTime:0.000692s ]
+[ sql ] [ SQL ] UPDATE `fa_card`  SET `times`=5  WHERE  `card_no` = 'ef17527818960f511646c8877bb82a94a2c40b8558' [ RunTime:0.004413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_response` [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_response` WHERE  `userid` = 36545 [ RunTime:0.000397s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:09:30+08:00 ] 60.16.215.223 GET robot.xlove99.top/api/card/getconfig
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000904s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.000758s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_config` WHERE  `group` = 'robot' [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_lvimg` [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_lvimg` WHERE  `is_open` = '1' [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_present` [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_present` WHERE  `is_effect` = '是' [ RunTime:0.000813s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:09:33+08:00 ] 27.214.133.40 POST robot.xlove99.top/api/card/check
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000968s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SELECT `userid`,`card_no`,`bind_host`,`expire_time`,`is_barrage`,`is_active`,`last_day`,`times` FROM `fa_card` WHERE  `card_no` = 'c646c560d96dea72552bbe4810f21063bb22115722' LIMIT 1 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] UPDATE `fa_card`  SET `times`=3  WHERE  `card_no` = 'c646c560d96dea72552bbe4810f21063bb22115722' [ RunTime:0.004644s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_response` [ RunTime:0.000885s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_response` WHERE  `userid` = 37587 [ RunTime:0.000563s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:09:33+08:00 ] 27.214.133.40 GET robot.xlove99.top/api/card/getconfig
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000713s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.000790s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_config` WHERE  `group` = 'robot' [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_lvimg` [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_lvimg` WHERE  `is_open` = '1' [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_present` [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_present` WHERE  `is_effect` = '是' [ RunTime:0.000568s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:10:24+08:00 ] 171.15.157.253 POST robot.xlove99.top/api/card/check
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000796s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000738s ]
+[ sql ] [ SQL ] SELECT `userid`,`card_no`,`bind_host`,`expire_time`,`is_barrage`,`is_active`,`last_day`,`times` FROM `fa_card` WHERE  `card_no` = '214123413' LIMIT 1 [ RunTime:0.000617s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:12:34+08:00 ] 175.150.241.23 POST robot.xlove99.top/api/card/check
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000764s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000867s ]
+[ sql ] [ SQL ] SELECT `userid`,`card_no`,`bind_host`,`expire_time`,`is_barrage`,`is_active`,`last_day`,`times` FROM `fa_card` WHERE  `card_no` = '1e697dcb50237f6210b6b2261dc8b4235592e0152a' LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] UPDATE `fa_card`  SET `times`=3  WHERE  `card_no` = '1e697dcb50237f6210b6b2261dc8b4235592e0152a' [ RunTime:0.003518s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_response` [ RunTime:0.000836s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_response` WHERE  `userid` = 1000197 [ RunTime:0.000372s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:12:34+08:00 ] 175.150.241.23 GET robot.xlove99.top/api/card/getconfig
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000814s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_config` WHERE  `group` = 'robot' [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_lvimg` [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_lvimg` WHERE  `is_open` = '1' [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_present` [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_present` WHERE  `is_effect` = '是' [ RunTime:0.000557s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:13:00+08:00 ] 36.48.205.243 POST robot.xlove99.top/api/card/check
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001052s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT `userid`,`card_no`,`bind_host`,`expire_time`,`is_barrage`,`is_active`,`last_day`,`times` FROM `fa_card` WHERE  `card_no` = '08bf5272b8146546c118b5a76274c77e99705587fa' LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] UPDATE `fa_card`  SET `times`=2  WHERE  `card_no` = '08bf5272b8146546c118b5a76274c77e99705587fa' [ RunTime:0.003987s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_response` [ RunTime:0.000812s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_response` WHERE  `userid` = 1000226 [ RunTime:0.000541s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:13:00+08:00 ] 36.48.205.243 GET robot.xlove99.top/api/card/getconfig
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000717s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.000770s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_config` WHERE  `group` = 'robot' [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_lvimg` [ RunTime:0.000615s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_lvimg` WHERE  `is_open` = '1' [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_present` [ RunTime:0.000548s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_present` WHERE  `is_effect` = '是' [ RunTime:0.000705s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:13:09+08:00 ] 36.48.205.243 POST robot.xlove99.top/api/card/check
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001030s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SELECT `userid`,`card_no`,`bind_host`,`expire_time`,`is_barrage`,`is_active`,`last_day`,`times` FROM `fa_card` WHERE  `card_no` = '08bf5272b8146546c118b5a76274c77e99705587fa' LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] UPDATE `fa_card`  SET `times`=3  WHERE  `card_no` = '08bf5272b8146546c118b5a76274c77e99705587fa' [ RunTime:0.004190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_response` [ RunTime:0.000812s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_response` WHERE  `userid` = 1000226 [ RunTime:0.000481s ]
+---------------------------------------------------------------
+[ 2019-05-29T14:13:09+08:00 ] 36.48.205.243 GET robot.xlove99.top/api/card/getconfig
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000760s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.000914s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_config` WHERE  `group` = 'robot' [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_lvimg` [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_lvimg` WHERE  `is_open` = '1' [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_present` [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_present` WHERE  `is_effect` = '是' [ RunTime:0.000648s ]

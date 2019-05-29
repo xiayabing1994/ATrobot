@@ -1,0 +1,51 @@
+<div id="content-container" class="container">
+    <div class="user-section login-section">
+        <div class="logon-tab clearfix"> <a href="{:url('user/login')}?url={$url|urlencode}">{:__('Sign in')}</a> <a class="active">{:__('Sign up')}</a> </div>
+        <div class="login-main"> 
+            <form name="form1" id="register-form" class="form-vertical" method="POST" action="">
+                <input type="hidden" name="invite_user_id" value="0" />
+                <input type="hidden" name="url" value="{$url}" />
+                {:token()}
+                 <p>新注册用户可免费体验至6月20日，注册后请到 >>我的注册码页面查看使用 </p>
+
+                <div class="form-group">
+                    <label class="control-label">{:__('Mobile')}</label>
+                    <div class="controls">
+                        <input type="text" id="mobile" name="mobile" data-rule="required;mobile" class="form-control input-lg" placeholder="{:__('Mobile')}">
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">{:__('Password')}</label>
+                    <div class="controls">
+                        <input type="password" id="password" name="password" data-rule="required;password" class="form-control input-lg" placeholder="{:__('Password must be 6 to 30 characters')}">
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+                              <div class="form-group">
+                    <label class="control-label">{:__('绑定主播id')}</label>
+                    <div class="controls">
+                        <input type="text" id="bindhost" name="bindhost" data-rule="required;" class="form-control input-lg" placeholder="{:__('请输入要绑定的红人直播主播id')}">
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">{:__('Captcha')}</label>
+                    <div class="controls">
+                        <div class="input-group input-group-lg">
+                            <input type="text" name="captcha" class="form-control" placeholder="{:__('Captcha')}" data-rule="required;length(4)" style="border-radius: 0;" />
+                            <span class="input-group-addon" style="padding:0;border:none;">
+                                <img src="{:captcha_src()}" width="140" height="42" onclick="this.src = '{:captcha_src()}?r=' + Math.random();"/>
+                            </span>
+                        </div>
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">{:__('Sign up')}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

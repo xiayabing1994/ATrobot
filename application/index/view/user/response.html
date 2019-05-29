@@ -1,0 +1,38 @@
+<style type="text/css">
+    
+    td{
+        width:30%;
+    }
+</style>
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {include file="common/sidenav" /}
+        </div>
+        <div class="col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2 class="page-header">{:__('自定义回复')}</h2>
+                    <a href="{:url('user/responseadd')}" class="btn btn-xs btn-success btn-add " title="添加"><i class="fa fa-plus"></i> 添加</a>
+                    <table width='100%'>
+                    	<tr>
+                    		<th>关键字</th>
+                            <th>回复内容</th>
+                    		<th>操作</th>
+                    	</tr>
+                    	{volist name='responses' id='response'}
+                    	<tr>
+                    		<td>{$response.keyword}</td>
+                            <td>{$response.response}</td>
+                    		<td>
+                              <a href="responseedit/ids/{$response.id}" class="btn btn-xs btn-success btn-editone " title="修改"><i class="fa fa-pencil"></i></a>
+                              <a href="responsedel/ids/{$response.id}" class="btn btn-xs btn-danger btn-delone"  data-original-title="删除"><i class="fa fa-trash"></i></a>
+                          </td>
+                    	</tr>
+                    	{/volist}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

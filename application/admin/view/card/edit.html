@@ -1,0 +1,52 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Card_no')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-card_no" data-rule="required" class="form-control" name="row[card_no]" readonly="readonly" type="text" value="{$row.card_no|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Userid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-userid" data-rule="required" class="form-control" name="row[userid]" type="number" value="{$row.userid|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Bind_host')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-bind_host" data-rule="" class="form-control" name="row[bind_host]" type="text" value="{$row.bind_host|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Expire_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-expire_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" {:$Think.session.admin.username!='admin' ? 'readonly':''} data-use-current="true" name="row[expire_time]" type="text" value="{:$row.expire_time?datetime($row.expire_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Addtime')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-addtime" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[addtime]" type="text" value="{:$row.addtime?datetime($row.addtime):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Operate')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-operate" data-rule="required" class="form-control" name="row[operate]" type="text" value="{$row.operate|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Comment')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-comment" data-rule="" class="form-control" name="row[comment]" type="text" value="{$row.comment|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
