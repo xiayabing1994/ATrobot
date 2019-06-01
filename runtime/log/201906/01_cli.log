@@ -1,0 +1,30 @@
+[ 2019-06-01T18:16:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000155s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-01T18:16:28+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-01T18:16:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001552s ]
+[ 2019-06-01T18:16:28+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000624s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'monitor' [ RunTime:0.000422s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_monitor' [ RunTime:0.000349s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'robot' AND table_name = 'fa_monitor' ORDER BY ORDINAL_POSITION [ RunTime:0.001123s ]
+[ 2019-06-01T18:16:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000146s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-01T18:16:28+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-01T18:16:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001510s ]
+[ 2019-06-01T18:16:28+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-01T18:16:28+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-01T18:16:28+08:00 ][ info ] [ LANG ] /www/wwwroot/robot/application/admin/lang/zh-cn.php
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000699s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000875s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'monitor' LIMIT 1 [ RunTime:0.000437s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (0 , 'monitor' , '监听记录管理' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1559384188 , 1559384188) [ RunTime:0.004721s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'monitor/index' LIMIT 1 [ RunTime:0.000396s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'monitor/add' LIMIT 1 [ RunTime:0.000321s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'monitor/edit' LIMIT 1 [ RunTime:0.000267s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'monitor/del' LIMIT 1 [ RunTime:0.000284s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'monitor/multi' LIMIT 1 [ RunTime:0.000330s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 121 , 'monitor/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1559384188 , 1559384188) [ RunTime:0.000288s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 121 , 'monitor/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1559384188 , 1559384188) [ RunTime:0.000485s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 121 , 'monitor/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1559384188 , 1559384188) [ RunTime:0.000262s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 121 , 'monitor/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1559384188 , 1559384188) [ RunTime:0.000231s ]
+[ 2019-06-01T18:16:28+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 121 , 'monitor/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1559384188 , 1559384188) [ RunTime:0.000457s ]

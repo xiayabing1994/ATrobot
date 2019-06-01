@@ -8,9 +8,9 @@
                 <div class="panel-body">
                     <h2 class="page-header">{:__('绑定')}</h2>
 <form  class="form-horizontal nice-validator n-default n-bootstrap" role="form" data-toggle="validator" method="POST" action="{:url('user/cardbind')}" novalidate="novalidate">
-
+     <p>主播ID仅可绑定一次,请确认后再提交</p>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">主播:</label>
+        <label class="control-label col-xs-12 col-sm-2">主播ID:</label>
         <div class="col-xs-12 col-sm-8">
             <input  class="form-control" data-rule='required' name="bind_host" value="{$row.bind_host}" type="text">
         </div>

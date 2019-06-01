@@ -1,0 +1,40 @@
+
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {include file="common/sidenav" /}
+        </div>
+        <div class="col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2 class="page-header">{:__('机器人设置')}</h2>
+                    <p>弹幕开关:
+                        <a href="javascript:changeSetting('is_barrage');" data-toggle="tooltip"  class="btn-change" data-original-title="点击切换">
+                        <i class="fa fa-toggle-on {$setting.is_barrage==1 ? 'text-success' : 'fa-flip-horizontal text-gray' } fa-2x">
+                        </i>
+                        </a>
+                    </p>
+                    <p>话题开关:
+                        <a href="javascript:changeSetting('is_top');" data-toggle="tooltip"  class="btn-change" data-original-title="点击切换">
+                        <i class="fa fa-toggle-on {$setting.is_top==1 ? 'text-success' : 'fa-flip-horizontal text-gray' } fa-2x">
+                        </i>
+                    </a></p>
+                    <p>pk推送开关:
+                        <a href="javascript:changeSetting('is_pk');" data-toggle="tooltip"  class="btn-change" data-original-title="点击切换">
+                        <i class="fa fa-toggle-on {$setting.is_pk==1 ? 'text-success' : 'fa-flip-horizontal text-gray' } fa-2x">
+                        </i>
+                    </a></p>
+                    <p>新人引导开关:<a href="javascript:changeSetting('is_new');" data-toggle="tooltip"  class="btn-change" data-original-title="点击切换">
+                        <i class="fa fa-toggle-on {$setting.is_new==1 ? 'text-success' : 'fa-flip-horizontal text-gray' } fa-2x">
+                        </i>
+                    </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function changeSetting(sname){
+        $.post('/api/setting/change',{sname:sname},function(data){location.reload()})
+    }
+</script>

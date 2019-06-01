@@ -20,20 +20,23 @@
                     <table id="table" class="table table-striped table-bordered table-hover"  width='100%'>
                     	<tr>
                     		<th style='width:22px'>注册码</th>
+                            <th>复制</th>
                             <th>到期时间</th>
-                            <th>弹幕开关</th>
                             <th>绑定主播id</th>
-                    		<th>操作</th>
+                    		<th></th>
                     	</tr>
-                    	{volist name='usercards' id='card'}
+                    	{volist name='usercards' id='card' key='k'}
                     	<tr>
-                    		<td >{$card.card_no} </td>
+                    		<td >
+                                <span id="card_no{$k}">{$card.card_no}</span>
+                            </td>
+                            <td>                               
+                                <input style="margin-left:6px;"  class='btn btn-xs btn-success btn-editone ' type="button" onclick="cp(document.getElementById('card_no{$k}'));" value="复制注册码" >
+                            </td>
                             <td> {:date('Y-m-d H:i',$card.expire_time)}</td>
-                          <td><button onclick="barrageChange('{$card.card_no}')" > {$card['is_barrage']==1 ? '开' : '关' } </button> </td>
                           <td>{$card.bind_host}</td>
                     		<td>{$card.bind_host!='' ? '': "<a href='cardbind/ids/$card[id]' class='btn btn-xs btn-success btn-editone ' title='绑定主播'><i class='fa fa-pencil'></i></a>"}
-                                
-                          <a onclick="alert({$card.c_url})" class='btn btn-xs btn-success btn-editone ' title='生成书签'><i class='fa fa-circle'></i></a>
+<!--                          <a onclick="alert({$card.c_url})" class='btn btn-xs btn-success btn-editone ' title='生成书签'><i class='fa fa-circle'></i></a>-->
                           </td>
                     	</tr>
                     	{/volist}
@@ -51,5 +54,23 @@
   function puturl(url){
     $('#puturl').text(url);
   }
-
+    function selectText(x) {
+        if (document.selection) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(x);
+            range.select();
+        } else if (window.getSelection) {
+            var selection = window.getSelection();
+            var range = document.createRange();
+            selection.removeAllRanges();
+            range.selectNodeContents(x);
+            selection.addRange(range);
+        }
+    }
+    function cp(x)
+    {
+        selectText(x);
+        document.execCommand("copy");
+        alert("复制成功,快去书签栏粘贴使用吧")
+    }
 </script>

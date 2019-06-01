@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:70:"/www/wwwroot/robot/public/../application/index/view/user/usercard.html";i:1559382106;s:61:"/www/wwwroot/robot/application/index/view/layout/default.html";i:1559025855;s:58:"/www/wwwroot/robot/application/index/view/common/meta.html";i:1558950519;s:61:"/www/wwwroot/robot/application/index/view/common/sidenav.html";i:1559380599;s:60:"/www/wwwroot/robot/application/index/view/common/script.html";i:1557482264;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"/www/wwwroot/robot/public/../application/index/view/user/usersetting.html";i:1559380131;s:61:"/www/wwwroot/robot/application/index/view/layout/default.html";i:1559025855;s:58:"/www/wwwroot/robot/application/index/view/common/meta.html";i:1558950519;s:61:"/www/wwwroot/robot/application/index/view/common/sidenav.html";i:1559380599;s:60:"/www/wwwroot/robot/application/index/view/common/script.html";i:1557482264;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -74,13 +74,7 @@
         </nav>
 
         <main class="content">
-            <style type="text/css">
-    
-    .mark{
-        font-size:18px;
-        font-weight:bold;
-    }
-</style>
+            
 <div id="content-container" class="container">
     <div class="row">
         <div class="col-md-3">
@@ -103,65 +97,35 @@
         <div class="col-md-9">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <h2 class="page-header"><?php echo __('我的注册码'); ?></h2>
-                    <p> <a href="javascript:$.getScript('https://robot.xlove99.top/robot/robot.js');" onclick="alert('请把按钮拖动到书签栏');return false;" style='cursor:move' class="btn  btn-success btn-add "><?php echo $site['site_title']; ?></a></p>
-                    <p style="color:darkolivegreen;font-size:16px">请将绿色 “AT场控”按钮<span class='mark'>拖拽</span>至网址栏下方的标签栏区域。<span class='mark'>进入主播房间网页</span>后，点击启动AT场控。<br>
-                        注：第一次使用，请复制下方注册码</p>
-                    <table id="table" class="table table-striped table-bordered table-hover"  width='100%'>
-                    	<tr>
-                    		<th style='width:22px'>注册码</th>
-                            <th>复制</th>
-                            <th>到期时间</th>
-                            <th>绑定主播id</th>
-                    		<th></th>
-                    	</tr>
-                    	<?php if(is_array($usercards) || $usercards instanceof \think\Collection || $usercards instanceof \think\Paginator): $k = 0; $__LIST__ = $usercards;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$card): $mod = ($k % 2 );++$k;?>
-                    	<tr>
-                    		<td >
-                                <span id="card_no<?php echo $k; ?>"><?php echo $card['card_no']; ?></span>
-                            </td>
-                            <td>                               
-                                <input style="margin-left:6px;"  class='btn btn-xs btn-success btn-editone ' type="button" onclick="cp(document.getElementById('card_no<?php echo $k; ?>'));" value="复制注册码" >
-                            </td>
-                            <td> <?php echo date('Y-m-d H:i',$card['expire_time']); ?></td>
-                          <td><?php echo $card['bind_host']; ?></td>
-                    		<td><?php echo $card['bind_host']!=''?'': "<a href='cardbind/ids/$card[id]' class='btn btn-xs btn-success btn-editone ' title='绑定主播'><i class='fa fa-pencil'></i></a>"; ?>
-<!--                          <a onclick="alert(<?php echo $card['c_url']; ?>)" class='btn btn-xs btn-success btn-editone ' title='生成书签'><i class='fa fa-circle'></i></a>-->
-                          </td>
-                    	</tr>
-                    	<?php endforeach; endif; else: echo "" ;endif; ?>
-                    </table>
+                    <h2 class="page-header"><?php echo __('机器人设置'); ?></h2>
+                    <p>弹幕开关:
+                        <a href="javascript:changeSetting('is_barrage');" data-toggle="tooltip"  class="btn-change" data-original-title="点击切换">
+                        <i class="fa fa-toggle-on <?php echo $setting['is_barrage']==1?'text-success' : 'fa-flip-horizontal text-gray'; ?> fa-2x">
+                        </i>
+                        </a>
+                    </p>
+                    <p>话题开关:
+                        <a href="javascript:changeSetting('is_top');" data-toggle="tooltip"  class="btn-change" data-original-title="点击切换">
+                        <i class="fa fa-toggle-on <?php echo $setting['is_top']==1?'text-success' : 'fa-flip-horizontal text-gray'; ?> fa-2x">
+                        </i>
+                    </a></p>
+                    <p>pk推送开关:
+                        <a href="javascript:changeSetting('is_pk');" data-toggle="tooltip"  class="btn-change" data-original-title="点击切换">
+                        <i class="fa fa-toggle-on <?php echo $setting['is_pk']==1?'text-success' : 'fa-flip-horizontal text-gray'; ?> fa-2x">
+                        </i>
+                    </a></p>
+                    <p>新人引导开关:<a href="javascript:changeSetting('is_new');" data-toggle="tooltip"  class="btn-change" data-original-title="点击切换">
+                        <i class="fa fa-toggle-on <?php echo $setting['is_new']==1?'text-success' : 'fa-flip-horizontal text-gray'; ?> fa-2x">
+                        </i>
+                    </a></p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script>
-      
-    function barrageChange(no){
-      $.post('/api/card/barragechange',{card_no:no},function(){window.location.reload();})
-    }
-  function puturl(url){
-    $('#puturl').text(url);
-  }
-    function selectText(x) {
-        if (document.selection) {
-            var range = document.body.createTextRange();
-            range.moveToElementText(x);
-            range.select();
-        } else if (window.getSelection) {
-            var selection = window.getSelection();
-            var range = document.createRange();
-            selection.removeAllRanges();
-            range.selectNodeContents(x);
-            selection.addRange(range);
-        }
-    }
-    function cp(x)
-    {
-        selectText(x);
-        document.execCommand("copy");
-        alert("复制成功,快去书签栏粘贴使用吧")
+    function changeSetting(sname){
+        $.post('/api/setting/change',{sname:sname},function(data){location.reload()})
     }
 </script>
         </main>

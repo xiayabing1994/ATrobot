@@ -8,6 +8,7 @@ use think\Cookie;
 use think\Hook;
 use think\Session;
 use think\Validate;
+use think\Db;
 
 /**
  * 会员中心
@@ -339,5 +340,13 @@ class User extends Frontend
     $id=$this->request->param('ids');
     $this->view->assign('row',db('card')->where('id',$this->request->param('ids'))->find());
     return $this->view->fetch();
+  }
+  public function usersetting(){
+        if(!Db::name('user_setting')->where('userid',cookie('uid'))->find()){
+            Db::name('user_setting')->insert(['userid'=>cookie('uid')]);
+        }
+        $setting=Db::name('user_setting')->where('userid',cookie('uid'))->find();
+        $this->assign('setting',$setting);
+        return $this->view->fetch();
   }
 }

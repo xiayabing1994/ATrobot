@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"/www/wwwroot/robot/public/../application/index/view/user/index.html";i:1558680817;s:61:"/www/wwwroot/robot/application/index/view/layout/default.html";i:1559025855;s:58:"/www/wwwroot/robot/application/index/view/common/meta.html";i:1558950519;s:61:"/www/wwwroot/robot/application/index/view/common/sidenav.html";i:1558425414;s:60:"/www/wwwroot/robot/application/index/view/common/script.html";i:1557482264;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"/www/wwwroot/robot/public/../application/index/view/user/index.html";i:1558680817;s:61:"/www/wwwroot/robot/application/index/view/layout/default.html";i:1559025855;s:58:"/www/wwwroot/robot/application/index/view/common/meta.html";i:1558950519;s:61:"/www/wwwroot/robot/application/index/view/common/sidenav.html";i:1559380599;s:60:"/www/wwwroot/robot/application/index/view/common/script.html";i:1557482264;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -95,11 +95,12 @@
     <ul class="list-group">
         <li class="list-group-heading"><?php echo __('User center'); ?></li>
         <li class="list-group-item <?php echo $config['actionname']=='index'?'active':''; ?>"> <a href="<?php echo url('user/index'); ?>"><i class="fa fa-user-circle fa-fw"></i> <?php echo __('User center'); ?></a> </li>
-        <li class="list-group-item <?php echo $config['actionname']=='profile'?'active':''; ?>"> <a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i> <?php echo __('Profile'); ?></a> </li>
+        <li class="list-group-item <?php echo $config['actionname']=='usersetting'?'active':''; ?>"> <a href="<?php echo url('user/usersetting'); ?>"><i class="fa fa-certificate fa-fw"></i> <?php echo __('个人设置'); ?></a> </li>
+        <!--        <li class="list-group-item <?php echo $config['actionname']=='profile'?'active':''; ?>"> <a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i> <?php echo __('Profile'); ?></a> </li>-->
+        <li class="list-group-item <?php echo $config['actionname']=='usercard'?'active':''; ?>"> <a href="<?php echo url('user/usercard'); ?>"><i class="fa fa-free-code-camp fa-fw"></i> <?php echo __('我的注册码'); ?></a> </li>
+        <li class="list-group-item <?php echo $config['actionname']=='response'?'active':''; ?>"> <a href="<?php echo url('user/response'); ?>"><i class="fa fa-commenting fa-fw"></i> <?php echo __('自定义消息管理'); ?></a> </li>
         <li class="list-group-item <?php echo $config['actionname']=='changepwd'?'active':''; ?>"> <a href="<?php echo url('user/changepwd'); ?>"><i class="fa fa-key fa-fw"></i> <?php echo __('Change password'); ?></a> </li>
-        <li class="list-group-item <?php echo $config['actionname']=='usercard'?'active':''; ?>"> <a href="<?php echo url('user/usercard'); ?>"><i class="fa fa-sign-out fa-fw"></i> <?php echo __('我的注册码'); ?></a> </li>
-                <li class="list-group-item <?php echo $config['actionname']=='response'?'active':''; ?>"> <a href="<?php echo url('user/response'); ?>"><i class="fa fa-sign-out fa-fw"></i> <?php echo __('自定义消息管理'); ?></a> </li>
-              <li class="list-group-item <?php echo $config['actionname']=='logout'?'active':''; ?>"> <a href="<?php echo url('user/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i> <?php echo __('Sign out'); ?></a> </li>
+        <li class="list-group-item <?php echo $config['actionname']=='logout'?'active':''; ?>"> <a href="<?php echo url('user/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i> <?php echo __('Sign out'); ?></a> </li>
 
     </ul>
     <?php echo hook('user_sidenav_after'); ?>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:66:"/www/wwwroot/robot/public/../application/admin/view/card/edit.html";i:1559383787;s:61:"/www/wwwroot/robot/application/admin/view/layout/default.html";i:1557482264;s:58:"/www/wwwroot/robot/application/admin/view/common/meta.html";i:1557482264;s:60:"/www/wwwroot/robot/application/admin/view/common/script.html";i:1557482264;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"/www/wwwroot/robot/public/../application/admin/view/auth/admin/edit.html";i:1557482264;s:61:"/www/wwwroot/robot/application/admin/view/layout/default.html";i:1557482264;s:58:"/www/wwwroot/robot/application/admin/view/common/meta.html";i:1557482264;s:60:"/www/wwwroot/robot/application/admin/view/common/script.html";i:1557482264;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -50,51 +50,50 @@
                             <!-- END RIBBON -->
                             <?php endif; ?>
                             <div class="content">
-                                <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
-
+                                <form id="edit-form" class="form-horizontal form-ajax" role="form" data-toggle="validator" method="POST" action="">
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Card_no'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Group'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-card_no" data-rule="required" class="form-control" name="row[card_no]" readonly="readonly" type="text" value="<?php echo htmlentities($row['card_no']); ?>">
+            <?php echo build_select('group[]', $groupdata, $groupids, ['class'=>'form-control selectpicker', 'multiple'=>'', 'data-rule'=>'required']); ?>
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Userid'); ?>:</label>
+        <label for="username" class="control-label col-xs-12 col-sm-2"><?php echo __('Username'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-userid" data-rule="required" class="form-control" name="row[userid]" type="number" value="<?php echo htmlentities($row['userid']); ?>">
+            <input type="text" class="form-control" id="username" name="row[username]" value="<?php echo htmlentities($row['username']); ?>" data-rule="required;username" />
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Bind_host'); ?>:</label>
+        <label for="email" class="control-label col-xs-12 col-sm-2"><?php echo __('Email'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-bind_host" data-rule="" class="form-control" name="row[bind_host]" type="text" value="<?php echo htmlentities($row['bind_host']); ?>">
+            <input type="email" class="form-control" id="email" name="row[email]" value="<?php echo htmlentities($row['email']); ?>" data-rule="required;email" />
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Expire_time'); ?>:</label>
+        <label for="nickname" class="control-label col-xs-12 col-sm-2"><?php echo __('Nickname'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-expire_time" data-rule="" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" <?php echo \think\Session::get('admin.username')!='admin' ? 'readonly':''; ?> data-use-current="true" name="row[expire_time]" type="text" value="<?php echo $row['expire_time']?datetime($row['expire_time']):''; ?>">
+            <input type="text" class="form-control" id="nickname" name="row[nickname]" autocomplete="off" value="<?php echo htmlentities($row['nickname']); ?>" data-rule="required" />
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Addtime'); ?>:</label>
+        <label for="password" class="control-label col-xs-12 col-sm-2"><?php echo __('Password'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-addtime" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[addtime]" type="text" value="<?php echo $row['addtime']?datetime($row['addtime']):''; ?>">
+            <input type="password" class="form-control" id="password" name="row[password]" autocomplete="new-password" value="" data-rule="password" />
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Operate'); ?>:</label>
+        <label for="loginfailure" class="control-label col-xs-12 col-sm-2"><?php echo __('Loginfailure'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-operate" data-rule="required" class="form-control" name="row[operate]" type="text" value="<?php echo htmlentities($row['operate']); ?>">
+            <input type="number" class="form-control" id="loginfailure" name="row[loginfailure]" value="<?php echo $row['loginfailure']; ?>" data-rule="required" />
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Comment'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-comment" data-rule="" class="form-control" name="row[comment]" type="text" value="<?php echo htmlentities($row['comment']); ?>">
+            <?php echo build_radios('row[status]', ['normal'=>__('Normal'), 'hidden'=>__('Hidden')], $row['status']); ?>
         </div>
     </div>
-    <div class="form-group layer-footer">
+    <div class="form-group hidden layer-footer">
         <label class="control-label col-xs-12 col-sm-2"></label>
         <div class="col-xs-12 col-sm-8">
             <button type="submit" class="btn btn-success btn-embossed disabled"><?php echo __('OK'); ?></button>
@@ -102,7 +101,6 @@
         </div>
     </div>
 </form>
-
                             </div>
                         </div>
                     </div>

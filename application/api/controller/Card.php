@@ -33,13 +33,18 @@ class Card extends Controller{
             return json(['code'=>102,'msg'=>'注册码已过期','expire'=>$cards['expire_time']]);
         }
         db('card')->where('card_no',$card)->update(['times'=>$cards['times']+1]);
+        if(!$conf=db('user_setting')->where('userid',$cards['userid'])->find()){
+            db('user_setting')->insert(['userid'=>$cards['userid']]);
+        }
+        $conf=db('user_setting')->where('userid',$cards['userid'])->find();
+        unset($conf['id']);
         $msgs=db('response')->where('userid',$cards['userid'])->select();
         $returndata=[
             'bind_host'=>$cards['bind_host'],
             'expire_time'=>$cards['expire_time'],
             'is_barrage'=>$cards['is_barrage'],
         ];
-    	return json(['code'=>100,'msg'=>'校验成功','data'=>$returndata,'msgs'=>$msgs,'guide'=>$this->getGuide()]);
+    	return json(['code'=>100,'msg'=>'校验成功','data'=>array_merge($returndata,$conf),'msgs'=>$msgs,'guide'=>$this->getGuide()]);
     }
 
     public function getConfig(){
@@ -48,7 +53,11 @@ class Card extends Controller{
         foreach($robot_config as $rv){
             $imgarr[$rv['name']]=$rv['value'];
         }
-        $imgarr['test_response']=explode(';',str_replace('；',';',$imgarr['test_response']));
+        $imgarr['test_response']=explode(';',str_replace('；',';',$imgarr['test_response']))[0];
+        $imgarr['present_reponse']=explode(';',str_replace('；',';',$imgarr['present_reponse']))[0];
+        $imgarr['huojiang_response']=explode(';',str_replace('；',';',$imgarr['huojiang_response']))[0];
+        $imgarr['lightup_response']=explode(';',str_replace('；',';',$imgarr['lightup_response']))[0];
+        $imgarr['focus_response']=explode(';',str_replace('；',';',$imgarr['focus_response']))[0];
     	$lvimgarr=[];
     	$imgs=db('lvimg')->where('is_open',1)->select();
         foreach($imgs as $v){

@@ -64,6 +64,13 @@ class Card extends Model
     {
         return $value === '' ? null : ($value && !is_numeric($value) ? strtotime($value) : $value);
     }
+    protected function setUseridAttr($value)
+    {
+        if(strlen($value)==11){
+            return db('user')->where('mobile',$value)->find()['id'];
+        }
+        return $value;
+    }
 
 
 }
