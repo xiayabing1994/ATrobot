@@ -13,6 +13,8 @@ return [
     'Dictionary'                  => '字典配置',
     'User'                        => '会员配置',
     'Example'                     => '示例分组',
+    'Robot'                       => '机器人配置',
+    'Crontab'                     => '定时设置',
     'Extend'                      => '扩展属性',
     'String'                      => '字符',
     'Text'                        => '文本',

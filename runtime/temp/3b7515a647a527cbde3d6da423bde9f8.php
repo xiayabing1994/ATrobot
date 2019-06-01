@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"/www/wwwroot/robot/public/../application/admin/view/guide/index.html";i:1559095445;s:61:"/www/wwwroot/robot/application/admin/view/layout/default.html";i:1557482264;s:58:"/www/wwwroot/robot/application/admin/view/common/meta.html";i:1557482264;s:60:"/www/wwwroot/robot/application/admin/view/common/script.html";i:1557482264;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"/www/wwwroot/robot/public/../application/admin/view/guide/index.html";i:1559118226;s:61:"/www/wwwroot/robot/application/admin/view/layout/default.html";i:1557482264;s:58:"/www/wwwroot/robot/application/admin/view/common/meta.html";i:1557482264;s:60:"/www/wwwroot/robot/application/admin/view/common/script.html";i:1557482264;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>

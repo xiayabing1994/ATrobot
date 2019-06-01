@@ -26,9 +26,10 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {checkbox: true},
                         {field: 'id', title: __('Id')},
                         {field: 'g_content', title: __('G_content')},
-                        {field: 'g_cate', title: __('G_cate'), searchList: {"ad":__('G_cate ad'),"topic":__('G_cate topic'),"new":__('G_cate new'),"pk":__('G_cate pk')}, formatter: Table.api.formatter.normal},
+                        {field: 'g_type', title: __('G_type'), searchList: {"ad":__('G_type ad'),"topic":__('G_type topic'),"new":__('G_type new'),"pk":__('G_type pk')}, formatter: Table.api.formatter.normal},
+                        {field: 'category_id', title: __('Category_id')},
                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
-                        {field: 'status', title: __('Status'), searchList: {"1":__('Status 1'),"0":__('Status 0')}, formatter: Table.api.formatter.toggle},
+                        {field: 'status', title: __('Status'), searchList: {"1":__('Status 1'),"0":__('Status 0')}, formatter: Table.api.formatter.status},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]

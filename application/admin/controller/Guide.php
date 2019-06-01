@@ -22,7 +22,7 @@ class Guide extends Backend
     {
         parent::_initialize();
         $this->model = new \app\admin\model\Guide;
-        $this->view->assign("gCateList", $this->model->getGCateList());
+        $this->view->assign("gTypeList", $this->model->getGTypeList());
         $this->view->assign("statusList", $this->model->getStatusList());
     }
     

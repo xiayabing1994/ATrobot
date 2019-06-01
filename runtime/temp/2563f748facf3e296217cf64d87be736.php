@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:70:"/www/wwwroot/robot/public/../application/index/view/user/usercard.html";i:1559027411;s:61:"/www/wwwroot/robot/application/index/view/layout/default.html";i:1559025855;s:58:"/www/wwwroot/robot/application/index/view/common/meta.html";i:1558950519;s:61:"/www/wwwroot/robot/application/index/view/common/sidenav.html";i:1558425414;s:60:"/www/wwwroot/robot/application/index/view/common/script.html";i:1557482264;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:70:"/www/wwwroot/robot/public/../application/index/view/user/usercard.html";i:1559115146;s:61:"/www/wwwroot/robot/application/index/view/layout/default.html";i:1559025855;s:58:"/www/wwwroot/robot/application/index/view/common/meta.html";i:1558950519;s:61:"/www/wwwroot/robot/application/index/view/common/sidenav.html";i:1558425414;s:60:"/www/wwwroot/robot/application/index/view/common/script.html";i:1557482264;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -106,7 +106,7 @@
                     <p> <a href="javascript:$.getScript('https://robot.xlove99.top/robot/robot.js');" onclick="alert('请把按钮拖动到书签栏');return false;" style='cursor:move' class="btn  btn-success btn-add "><?php echo $site['site_title']; ?></a></p>
                     <p style="color:darkolivegreen;font-size:16px">请将绿色 “AT场控”按钮<span class='mark'>拖拽</span>至网址栏下方的标签栏区域。<span class='mark'>进入主播房间网页</span>后，点击启动AT场控。<br>
                         注：第一次使用，请复制下方注册码</p>
-                    <table width='100%'>
+                    <table id="table" class="table table-striped table-bordered table-hover"  width='100%'>
                     	<tr>
                     		<th style='width:22px'>注册码</th>
                             <th>到期时间</th>
@@ -116,8 +116,8 @@
                     	</tr>
                     	<?php if(is_array($usercards) || $usercards instanceof \think\Collection || $usercards instanceof \think\Paginator): $i = 0; $__LIST__ = $usercards;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$card): $mod = ($i % 2 );++$i;?>
                     	<tr>
-                    		<td width='12%'><?php echo $card['card_no']; ?></td>
-                            <td><?php echo date('Y-m-d H:i',$card['expire_time']); ?></td>
+                    		<td ><?php echo $card['card_no']; ?> </td>
+                            <td> <?php echo date('Y-m-d H:i',$card['expire_time']); ?></td>
                           <td><button onclick="barrageChange('<?php echo $card['card_no']; ?>')" > <?php echo $card['is_barrage']==1?'开' : '关'; ?> </button> </td>
                           <td><?php echo $card['bind_host']; ?></td>
                     		<td><?php echo $card['bind_host']!=''?'': "<a href='cardbind/ids/$card[id]' class='btn btn-xs btn-success btn-editone ' title='绑定主播'><i class='fa fa-pencil'></i></a>"; ?>

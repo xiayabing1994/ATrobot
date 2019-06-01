@@ -1,7 +1,14 @@
-document.write("<script type='text/javascript' src='./jquery.js'> </script>");
+//document.write("<script type='text/javascript' src='./jquery.js'> </script>");
+
 var is_barrage = 0; //消息发送类型
 var imgarr,lvimgarr,prensentimgarr,getimgarr;
 var selfMsgs = []; //自定义消息回复
+var guide = {}; //话题等信息
+var times_topic = 60; //1分钟话题计时
+var counts_topic = 5,num_topic = 0; //规定时间内的信息条数，5条为例
+var times_advert = 120; //2分钟广告计时
+var times_news = 180; //3分钟一次新人引导
+
 var c = localStorage.getItem("serial_robot");
 var selfusername=$('.liveRoom_land_nickname').text();
 if(c){
@@ -25,19 +32,76 @@ function getInfo(){
           getimgarr = res.getimgarr;
           //console.log(getimgarr);
           listenli();
+          topic();
+          fnNew();
+          advert();
       }
 	})
 }
+function topic(){
+  	var times = times_topic;
+	var setIn_topic = setInterval(function(){
+        if(times > 0){
+            times--;
+          	if(num_topic >= counts_topic){
+              	if(guide.topic && guide.topic.length > 0){
+                	var topic = guide.topic;
+                	var len = topic.length;
+                	var random = parseInt(Math.random()*len);
+                  	sendMsg(topic[random]);
+                  	num_topic = 0;
+                  	times = times_topic;
+                }
+            }
+        }else{
+            num_topic = 0;
+            times = times_topic;
+        }
+    },1000)
+}
+function advert(){
+  	var times =  times_advert;
+	var setIn_advert = setInterval(function(){
+   		 if(times > 0){
+         	times--;
+         }else{
+           	if(guide.ad && guide.ad.length > 0){
+                var ad = guide.ad;
+                var len = ad.length;
+                var random = parseInt(Math.random()*len);
+                sendMsg(ad[random]);
+            }
+         	times = times_advert;
+         }
+    },1000)
+}
+function fnNew(){
+	var times =  times_news;
+	var setIn_advert = setInterval(function(){
+   		 if(times > 0){
+         	times--;
+         }else{
+           	if(guide.new && guide.new.length > 0){
+                var new1 = guide.new;
+                var len = new1.length;
+                var random = parseInt(Math.random()*len);
+                sendMsg(new1[random]);
+            }
+         	times = times_news;
+         }
+    },1000)
+}
+
 
 //向直播间发送消息
 function sendMsg(msg){
     $('#messageEmoji').val(msg);
   	console.log(msg)
-    if(is_barrage == 0){
+   	/*if(is_barrage == 0){
           $(".liveroom_gift_send").click();
     }else{
           $('.liveroom_gift_barrage').click();
-    }
+    }*/
 }
 
 //检验注册码是否过期
@@ -60,6 +124,7 @@ function checkCode(c){
           }
           is_barrage = res.data.is_barrage=='1' ? 1 : 0;                          //区别弹幕发送还是普通发送
           selfMsgs = res.msgs;
+       	  guide = res.guide;
           localStorage.setItem("serial_robot",c);
           getInfo();
       }
@@ -72,6 +137,8 @@ function listenli(){
   var Observer = new MutationObserver(function (mutations, instance) {
     //这里时间听到的事件
     //console.log(mutations);
+    num_topic ++;
+    console.log(num_topic);
     var lastLi = mutations[mutations.length-1];//最新一个li
     var username = "";
     var isGet = false; //判断是否获得奖励

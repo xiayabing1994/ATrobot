@@ -38,6 +38,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'addtime', title: __('Addtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'operate', title: __('Operate')},
                         {field: 'comment', title: __('Comment')},
+                        {field: 'is_using', title: __('Is_using'),searchList: {"1":__('Is_using 1'),"0":__('Is_using 0')}, formatter: Table.api.formatter.normal},
                         {field: 'times', title: __('Times'),operate:'BETWEEN',},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]

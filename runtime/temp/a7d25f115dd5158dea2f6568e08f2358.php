@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:70:"/www/wwwroot/robot/public/../application/index/view/user/response.html";i:1558426716;s:61:"/www/wwwroot/robot/application/index/view/layout/default.html";i:1559025855;s:58:"/www/wwwroot/robot/application/index/view/common/meta.html";i:1558950519;s:61:"/www/wwwroot/robot/application/index/view/common/sidenav.html";i:1558425414;s:60:"/www/wwwroot/robot/application/index/view/common/script.html";i:1557482264;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:70:"/www/wwwroot/robot/public/../application/index/view/user/response.html";i:1559113815;s:61:"/www/wwwroot/robot/application/index/view/layout/default.html";i:1559025855;s:58:"/www/wwwroot/robot/application/index/view/common/meta.html";i:1558950519;s:61:"/www/wwwroot/robot/application/index/view/common/sidenav.html";i:1558425414;s:60:"/www/wwwroot/robot/application/index/view/common/script.html";i:1557482264;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -75,10 +75,7 @@
 
         <main class="content">
             <style type="text/css">
-    
-    td{
-        width:30%;
-    }
+
 </style>
 <div id="content-container" class="container">
     <div class="row">
@@ -103,11 +100,11 @@
                 <div class="panel-body">
                     <h2 class="page-header"><?php echo __('自定义回复'); ?></h2>
                     <a href="<?php echo url('user/responseadd'); ?>" class="btn btn-xs btn-success btn-add " title="添加"><i class="fa fa-plus"></i> 添加</a>
-                    <table width='100%'>
+                    <table width='100%' class="table table-striped table-bordered table-hover" >
                     	<tr>
-                    		<th>关键字</th>
-                            <th>回复内容</th>
-                    		<th>操作</th>
+                    		<td>关键字</td>
+                            <td>回复内容</td>
+                    		<td>操作</td>
                     	</tr>
                     	<?php if(is_array($responses) || $responses instanceof \think\Collection || $responses instanceof \think\Paginator): $i = 0; $__LIST__ = $responses;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$response): $mod = ($i % 2 );++$i;?>
                     	<tr>
@@ -120,6 +117,7 @@
                     	</tr>
                     	<?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
+                    <?php echo $page; ?>
                 </div>
             </div>
         </div>

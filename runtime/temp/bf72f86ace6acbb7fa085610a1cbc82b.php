@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"/www/wwwroot/robot/public/../application/admin/view/card/addcard.html";i:1558860455;s:61:"/www/wwwroot/robot/application/admin/view/layout/default.html";i:1557482264;s:58:"/www/wwwroot/robot/application/admin/view/common/meta.html";i:1557482264;s:60:"/www/wwwroot/robot/application/admin/view/common/script.html";i:1557482264;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"/www/wwwroot/robot/public/../application/admin/view/user/rule/index.html";i:1557482264;s:61:"/www/wwwroot/robot/application/admin/view/layout/default.html";i:1557482264;s:58:"/www/wwwroot/robot/application/admin/view/common/meta.html";i:1557482264;s:60:"/www/wwwroot/robot/application/admin/view/common/script.html";i:1557482264;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -50,53 +50,34 @@
                             <!-- END RIBBON -->
                             <?php endif; ?>
                             <div class="content">
-                                <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+                                <div class="panel panel-default panel-intro">
+    <?php echo build_heading(); ?>
 
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('注册码数量'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
+    <div class="panel-body">
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="one">
+                <div class="widget-body no-padding">
+                    <div id="toolbar" class="toolbar">
+                        <?php echo build_toolbar('refresh,add,edit,del'); ?>
+                        <div class="dropdown btn-group <?php echo $auth->check('user/rule/multi')?'':'hide'; ?>">
+                            <a class="btn btn-primary btn-more dropdown-toggle btn-disabled disabled" data-toggle="dropdown"><i class="fa fa-cog"></i> <?php echo __('More'); ?></a>
+                            <ul class="dropdown-menu text-left" role="menu">
+                                <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=normal"><i class="fa fa-eye"></i> <?php echo __('Set to normal'); ?></a></li>
+                                <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=hidden"><i class="fa fa-eye-slash"></i> <?php echo __('Set to hidden'); ?></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <table id="table" class="table table-striped table-bordered table-hover" 
+                           data-operate-edit="<?php echo $auth->check('user/rule/edit'); ?>" 
+                           data-operate-del="<?php echo $auth->check('user/rule/del'); ?>" 
+                           width="100%">
+                    </table>
+                </div>
+            </div>
 
-            <select  id="c-card-number" data-rule="required" class="form-control" name="row[card_number]">
-                <option value="1" >1</option>
-                <option value="10" >10</option>
-                <option value="100" selected >100</option>
-                <option value="500" >500</option>
-                <option value="1000" >1000</option>
-            </select>
         </div>
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('所属代理'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-agent" placeholder="请确保输入正确的代理用户名"  data-rule="required" class="form-control" name="row[agent]" type="text">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('开卡时长(天)'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <select  id="c-last-day" data-rule="required" class="form-control" name="row[last_day]">
-                <option value="1" >1</option>
-                <option value="3" >3</option>
-                <option value="7" >7</option>
-                <option value="30" selected>30</option>
-                <option value="365" >365</option>
-            </select>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('备注信息'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-bind_host" data-rule="" placeholder="请备注批量添加信息例：6月26代理agent分配100张" class="form-control" name="row[comment]" type="text">
-        </div>
-    </div>
-    <div class="form-group layer-footer">
-        <label class="control-label col-xs-12 col-sm-2"></label>
-        <div class="col-xs-12 col-sm-8">
-            <button type="submit" class="btn btn-success btn-embossed "><?php echo __('OK'); ?></button>
-            <button type="reset" class="btn btn-default btn-embossed"><?php echo __('Reset'); ?></button>
-        </div>
-    </div>
-</form>
+</div>
 
                             </div>
                         </div>

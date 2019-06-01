@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"/www/wwwroot/robot/public/../application/index/view/user/register.html";i:1558943484;s:61:"/www/wwwroot/robot/application/index/view/layout/default.html";i:1559025855;s:58:"/www/wwwroot/robot/application/index/view/common/meta.html";i:1558950519;s:60:"/www/wwwroot/robot/application/index/view/common/script.html";i:1557482264;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"/www/wwwroot/robot/public/../application/index/view/user/register.html";i:1559114909;s:61:"/www/wwwroot/robot/application/index/view/layout/default.html";i:1559025855;s:58:"/www/wwwroot/robot/application/index/view/common/meta.html";i:1558950519;s:60:"/www/wwwroot/robot/application/index/view/common/script.html";i:1557482264;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -115,18 +115,18 @@
                         <p class="help-block"></p>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="control-label"><?php echo __('Captcha'); ?></label>
-                    <div class="controls">
-                        <div class="input-group input-group-lg">
-                            <input type="text" name="captcha" class="form-control" placeholder="<?php echo __('Captcha'); ?>" data-rule="required;length(4)" style="border-radius: 0;" />
-                            <span class="input-group-addon" style="padding:0;border:none;">
-                                <img src="<?php echo captcha_src(); ?>" width="140" height="42" onclick="this.src = '<?php echo captcha_src(); ?>?r=' + Math.random();"/>
-                            </span>
-                        </div>
-                        <p class="help-block"></p>
-                    </div>
-                </div>
+<!--                <div class="form-group">-->
+<!--                    <label class="control-label"><?php echo __('Captcha'); ?></label>-->
+<!--                    <div class="controls">-->
+<!--                        <div class="input-group input-group-lg">-->
+<!--                            <input type="text" name="captcha" class="form-control" placeholder="<?php echo __('Captcha'); ?>" data-rule="required;length(4)" style="border-radius: 0;" />-->
+<!--                            <span class="input-group-addon" style="padding:0;border:none;">-->
+<!--                                <img src="<?php echo captcha_src(); ?>" width="140" height="42" onclick="this.src = '<?php echo captcha_src(); ?>?r=' + Math.random();"/>-->
+<!--                            </span>-->
+<!--                        </div>-->
+<!--                        <p class="help-block"></p>-->
+<!--                    </div>-->
+<!--                </div>-->
                               <div class="form-group">
                     <label class="control-label"><?php echo __('邀请码'); ?></label>
                     <div class="controls">

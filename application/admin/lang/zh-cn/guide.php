@@ -2,11 +2,12 @@
 
 return [
     'G_content'    => '引导内容',
-    'G_cate'       => '引导类型',
-    'G_cate ad'    => '广告',
-    'G_cate topic' => '话题',
-    'G_cate new'   => '新人',
-    'G_cate pk'    => 'PK',
+    'G_type'       => '引导类型',
+    'G_type ad'    => '广告',
+    'G_type topic' => '话题',
+    'G_type new'   => '新人',
+    'G_type pk'    => 'PK',
+    'Category_id'  => '所属分类',
     'Createtime'   => '添加时间',
     'Status'       => '是否有效',
     'Status 1'     => '有效',

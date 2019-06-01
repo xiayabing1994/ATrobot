@@ -107,20 +107,20 @@ class User extends Frontend
             }
             $rule = [
                 'mobile'    => 'regex:/^1\d{10}$/',
-                'captcha'   => 'require|captcha',
+//                'captcha'   => 'require|captcha',
                 '__token__' => 'token',
             ];
 
             $msg = [
-                'captcha.require'  => 'Captcha can not be empty',
-                'captcha.captcha'  => 'Captcha is incorrect',
+//                'captcha.require'  => 'Captcha can not be empty',
+//                'captcha.captcha'  => 'Captcha is incorrect',
                 'mobile'           => 'Mobile is incorrect',
             ];
             $data = [
                 'username'  => $username,
                 'password'  => $password,
                 'mobile'    => $mobile,
-                'captcha'   => $captcha,
+//                'captcha'   => $captcha,
                 '__token__' => $token,
             ];
             $validate = new Validate($rule, $msg);
@@ -284,15 +284,20 @@ class User extends Frontend
         return $this->view->fetch();
     }
    public function  response(){
-        $responses=db('response')->where('userid',Cookie::get('uid'))->select();
+        $responses=db('response')->where('userid',Cookie::get('uid'))->paginate(10);
+       $page = $responses->render();
         $this->assign('responses',$responses);
+        $this->assign('page',$page);
         return $this->view->fetch();
    } 
   public function responseadd(){
     if($this->request->post()){
       $keyword=$this->request->post('keyword');
        $response=$this->request->post('response');
-       if(db('response')->insert(['keyword'=>$keyword,'response'=>$response,'userid'=>cookie('uid')])){
+       if(db('response')->where(['keyword'=>$keyword,'userid'=>cookie('uid')])->find()){
+           $this->error('关键词已存在');
+       }
+       if(db('response')->insert(['addtime'=>time(),'keyword'=>$keyword,'response'=>$response,'userid'=>cookie('uid')])){
          $this->success('添加成功');
        }else{
          $this->error('添加失败');

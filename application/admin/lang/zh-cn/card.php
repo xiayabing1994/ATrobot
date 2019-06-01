@@ -13,5 +13,8 @@ return [
     'Is_active 0'=>'否',
     'Is_active 1'=>'是',
     'Is_active'  =>'是否激活',
+    'Is_using'   =>'是否使用中',
+    'Is_using 0' =>'否',
+    'Is_using 1' =>'是',
     'Last_day'   =>'开卡天数'
 ];

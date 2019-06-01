@@ -16,9 +16,8 @@ return array (
   'categorytype' => 
   array (
     'default' => 'Default',
-    'page' => 'Page',
     'article' => 'Article',
-    'test' => 'Test',
+    'guide' => 'Guide',
   ),
   'configgroup' => 
   array (
@@ -28,6 +27,7 @@ return array (
     'user' => 'User',
     'example' => 'Example',
     'robot' => 'Robot',
+    'crontab' => 'Crontab',
   ),
   'mail_type' => '1',
   'mail_smtp_host' => 'smtp.qq.com',
@@ -36,7 +36,6 @@ return array (
   'mail_smtp_pass' => 'password',
   'mail_verify_type' => '2',
   'mail_from' => '10000@qq.com',
-  'come_room_response' => '欢迎@username',
   'lightup_response' => '感谢@username的点亮',
   'focus_response' => '感谢@username的关注',
   'present_reponse' => '感谢@username赠送的present',
@@ -49,4 +48,10 @@ return array (
   'site_title' => 'AT场控机器人',
   'keywords' => '场控机器人 机器人  自动回复机器人 ',
   'description' => '场控机器人是用于直播平台自动回复自动感谢',
+  'test_response' => '欢迎光临@username;啊你哈撒哟@username;萨瓦迪卡@username;来了老弟@username',
+  'topic_monitor_second' => '300',
+  'topic_monitor_times' => '20',
+  'ad_send_seconds' => '303',
+  'new_send_seconds' => '306',
+  'heart_monitor_seconds' => '600',
 );

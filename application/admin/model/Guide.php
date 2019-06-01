@@ -25,15 +25,15 @@ class Guide extends Model
 
     // 追加属性
     protected $append = [
-        'g_cate_text',
+        'g_type_text',
         'status_text'
     ];
     
 
     
-    public function getGCateList()
+    public function getGTypeList()
     {
-        return ['ad' => __('G_cate ad'), 'topic' => __('G_cate topic'), 'new' => __('G_cate new'), 'pk' => __('G_cate pk')];
+        return ['ad' => __('G_type ad'), 'topic' => __('G_type topic'), 'new' => __('G_type new'), 'pk' => __('G_type pk')];
     }
 
     public function getStatusList()
@@ -42,10 +42,10 @@ class Guide extends Model
     }
 
 
-    public function getGCateTextAttr($value, $data)
+    public function getGTypeTextAttr($value, $data)
     {
-        $value = $value ? $value : (isset($data['g_cate']) ? $data['g_cate'] : '');
-        $list = $this->getGCateList();
+        $value = $value ? $value : (isset($data['g_type']) ? $data['g_type'] : '');
+        $list = $this->getGTypeList();
         return isset($list[$value]) ? $list[$value] : '';
     }
 

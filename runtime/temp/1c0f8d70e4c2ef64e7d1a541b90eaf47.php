@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:66:"/www/wwwroot/robot/public/../application/admin/view/guide/add.html";i:1559095445;s:61:"/www/wwwroot/robot/application/admin/view/layout/default.html";i:1557482264;s:58:"/www/wwwroot/robot/application/admin/view/common/meta.html";i:1557482264;s:60:"/www/wwwroot/robot/application/admin/view/common/script.html";i:1557482264;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:66:"/www/wwwroot/robot/public/../application/admin/view/guide/add.html";i:1559118226;s:61:"/www/wwwroot/robot/application/admin/view/layout/default.html";i:1557482264;s:58:"/www/wwwroot/robot/application/admin/view/common/meta.html";i:1557482264;s:60:"/www/wwwroot/robot/application/admin/view/common/script.html";i:1557482264;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -59,15 +59,21 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('G_cate'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('G_type'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
                         
-            <select  id="c-g_cate" data-rule="required" class="form-control selectpicker" name="row[g_cate]">
-                <?php if(is_array($gCateList) || $gCateList instanceof \think\Collection || $gCateList instanceof \think\Paginator): if( count($gCateList)==0 ) : echo "" ;else: foreach($gCateList as $key=>$vo): ?>
+            <select  id="c-g_type" data-rule="required" class="form-control selectpicker" name="row[g_type]">
+                <?php if(is_array($gTypeList) || $gTypeList instanceof \think\Collection || $gTypeList instanceof \think\Paginator): if( count($gTypeList)==0 ) : echo "" ;else: foreach($gTypeList as $key=>$vo): ?>
                     <option value="<?php echo $key; ?>" <?php if(in_array(($key), explode(',',"topic"))): ?>selected<?php endif; ?>><?php echo $vo; ?></option>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
             </select>
 
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Category_id'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-category_id" data-rule="required" data-source="category/selectpage" data-params='{"custom[type]":"guide"}' class="form-control selectpage" name="row[category_id]" type="text" value="">
         </div>
     </div>
     <div class="form-group">
