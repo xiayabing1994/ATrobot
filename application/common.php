@@ -362,3 +362,16 @@ if (!function_exists('hsv2rgb')) {
         ];
     }
 }
+
+if(!function_exists('load_config')){
+    function load_config($group=null){
+        $res=[];
+        $where=[];
+        if(!is_null($group)) $where['group']=$group;
+        $data=db('config')->where($where)->select();
+        foreach($data as $v){
+            $res[$v['name']]=$v['value'];
+        }
+        return $res;
+    }
+}

@@ -135,7 +135,7 @@ class User extends Frontend
                   'userid'=>Cookie::get('uid'),
                   'bind_host'=>$bindhost,
                   'addtime'=>time(),
-                  'expire_time'=>1560960000,
+                  'expire_time'=>1563206400,
                   'is_active'=>0,
                   'comment'=>'注册生成'
                 ]);
@@ -285,20 +285,23 @@ class User extends Frontend
         return $this->view->fetch();
     }
    public function  response(){
-        $responses=db('response')->where('userid',Cookie::get('uid'))->paginate(10);
+        $responses=db('response')->where('userid',$this->auth->id)->paginate(10);
        $page = $responses->render();
         $this->assign('responses',$responses);
         $this->assign('page',$page);
         return $this->view->fetch();
    } 
-  public function responseadd(){
+  public function responseadd2(){
     if($this->request->post()){
       $keyword=$this->request->post('keyword');
        $response=$this->request->post('response');
+        if(empty($keyword) || empty($response)){
+            $this->error('关键词或回复内容不能为空');
+        }
        if(db('response')->where(['keyword'=>$keyword,'userid'=>cookie('uid')])->find()){
            $this->error('关键词已存在');
        }
-       if(db('response')->insert(['addtime'=>time(),'keyword'=>$keyword,'response'=>$response,'userid'=>cookie('uid')])){
+       if(db('response')->insert(['addtime'=>time(),'keyword'=>$keyword,'response'=>$response,'userid'=>$this->auth->id])){
          $this->success('添加成功');
        }else{
          $this->error('添加失败');
@@ -306,12 +309,27 @@ class User extends Frontend
     }
     return $this->view->fetch();
   }
+    public function responseadd(){
+        if($this->request->post()) {
+            $keyword = $this->request->param()['keyword'];
+            $response = $this->request->param()['response'];
+            foreach ($keyword as $k => $v) {
+                if (empty($v) || empty($response[$k])) continue;
+                if (db('response')->where(['keyword' => $v, 'userid' => $this->auth->id])->find()) {
+                    continue;
+                }
+                db('response')->insert(['addtime' => time(), 'keyword' => $v, 'response' => $response[$k], 'userid' => $this->auth->id]);
+            }
+            $this->success('添加成功');
+        }
+        return $this->view->fetch();
+    }
     public function responseedit(){
     if($this->request->post('keyword')){
        $keyword=$this->request->post('keyword');
        $response=$this->request->post('response');
        $id=$this->request->post('id');
-       if(db('response')->where(['userid'=>cookie('uid'),'id'=>$id])->update(['keyword'=>$keyword,'response'=>$response])){
+       if(db('response')->where(['userid'=>$this->auth->id,'id'=>$id])->update(['keyword'=>$keyword,'response'=>$response])){
          $this->success('修改成功');
        }else{
          $this->error('修改失败');
@@ -342,10 +360,10 @@ class User extends Frontend
     return $this->view->fetch();
   }
   public function usersetting(){
-        if(!Db::name('user_setting')->where('userid',cookie('uid'))->find()){
-            Db::name('user_setting')->insert(['userid'=>cookie('uid')]);
+        if(!Db::name('user_setting')->where('userid',$this->auth->id)->find()){
+            Db::name('user_setting')->insert(['userid'=>$this->auth->id]);
         }
-        $setting=Db::name('user_setting')->where('userid',cookie('uid'))->find();
+        $setting=Db::name('user_setting')->where('userid',$this->auth->id)->find();
         $this->assign('setting',$setting);
         return $this->view->fetch();
   }

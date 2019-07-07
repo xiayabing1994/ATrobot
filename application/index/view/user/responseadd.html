@@ -1,5 +1,4 @@
-<style type="text/css">
-    
+<style type="text/css">  
     td{
         width:30%;
     }
@@ -12,28 +11,62 @@
         <div class="col-md-9">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <h2 class="page-header">{:__('添加自定义回复')}</h2>
-<form  class="form-horizontal nice-validator n-default n-bootstrap" role="form" data-toggle="validator" method="POST" action="{:url('user/responseadd')}" novalidate="novalidate">
-
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">关键字:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input  class="form-control" data-rule='required' name="keyword" type="text">
-        </div>
-     </div>
-   <div class="form-group">
-         <label class="control-label col-xs-12 col-sm-2">回复:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input  class="form-control" data-rule='required' name="response" type="text">
-        </div>
-     </div>
-        <div class="col-xs-12 col-sm-8">
-            <button type="submit" class="btn btn-success btn-embossed">确定</button>
-            <button type="reset" class="btn btn-default btn-embossed">重置</button>
-        </div>
-</form>
+                    <h2 class="page-header" style="display:inline-block; margin-right:20px">{:__('添加自定义回复')}</h2><button type="button" class="btn btn-info" onclick="add()">添加</button>
+                      <form  class="form-horizontal nice-validator n-default n-bootstrap" role="form" data-toggle="validator" method="POST" action="{:url('user/responseadd')}" novalidate="novalidate">
+                        	<div id="formbox">
+                                <div class="row" style="margin-bottom:10px">
+                                     <div class="col-md-5">
+                                          <label class="">关键词: </label>
+                                          <input  class="" data-rule='required' name="keyword[]" type="text">
+                                     </div>
+                                     <div class="col-md-5">
+                                         <label class="">回复: </label>
+                                         <input  class="" data-rule='required' name="response[]" type="text">
+                                     </div>
+                                </div>
+                        	</div>
+                        <!--<div class="form-group">
+                              <label class="control-label col-xs-12 col-sm-2">关键字:</label>
+                              <div class="col-xs-12 col-sm-8">
+                                  <input  class="form-control" data-rule='required' name="keyword" type="text">
+                              </div>
+                           </div>
+                         <div class="form-group">
+                               <label class="control-label col-xs-12 col-sm-2">回复:</label>
+                              <div class="col-xs-12 col-sm-8">
+                                  <input  class="form-control" data-rule='required' name="response" type="text">
+                              </div>
+                        </div>-->
+                        <div class="col-xs-12 col-sm-8">
+                            <button type="submit" class="btn btn-success btn-embossed">确定</button>
+                            <button type="reset" class="btn btn-default btn-embossed">重置</button>
+                        </div>
+                      </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="/robot/jquery.js"></script>
+<script>
+  	function add(){
+    	var str = '<div class="row" style="margin-bottom:10px">'+
+            '<div class="col-md-5">'+
+            '<label class="">关键词: </label>'+
+            '<input  class="" data-rule="required" name="keyword[]" type="text">'+
+              '</div>'+
+              '<div class="col-md-5">'+
+              '<label class="">回复: </label>'+
+              '<input  class="" data-rule="required" name="response[]" type="text">'+
+                '</div>'+
+            	'<div class="col-md-2">'+
+                  '<button type="button" class="btn btn-danger delbtn">删除</button>'+
+  				'</div>'+
+  			'</div>';
+    	$("#formbox").append(str);
+      	$("#formbox").on("click",".delbtn",function(){
+        	$(this).parent().parent().remove();
+        })
+      	//document.getElementById("formbox").appendChild(str)
+    }
+</script>

@@ -1,0 +1,42 @@
+---------------------------------------------------------------
+[ 2019-07-07T18:32:59+08:00 ] 183.197.190.7 POST robot.xlove99.top/api/card/monitor
+[运行时间：0.030605s] [吞吐率：32.67req/s] [内存消耗：3,119.66kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000725s ]
+[ info ] [ LANG ] /www/wwwroot/robot/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'card',
+    2 => 'monitor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://www.hongle.tv/103229613',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'origin' => 'https://www.hongle.tv',
+  'accept' => '*/*',
+  'content-length' => '70',
+  'host' => 'robot.xlove99.top',
+)
+[ info ] [ PARAM ] array (
+  'card_no' => '56a810a4f798062175c896b7420cb5715fb237e849',
+  'bind_host' => '103229613',
+)
+[ info ] [ LANG ] /www/wwwroot/robot/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001124s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Card->monitor[ /www/wwwroot/robot/application/api/controller/Card.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000514s ] mysql:host=127.0.0.1;dbname=robot;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_monitor` [ RunTime:0.000757s ]
+[ sql ] [ SQL ] INSERT INTO `fa_monitor` (`card_no` , `bind_host` , `createtime`) VALUES ('56a810a4f798062175c896b7420cb5715fb237e849' , '103229613' , 1562495579) [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_card` [ RunTime:0.000606s ]
+[ sql ] [ SQL ] UPDATE `fa_card`  SET `is_using`='1'  WHERE  `card_no` = '56a810a4f798062175c896b7420cb5715fb237e849'  AND `bind_host` = '103229613' [ RunTime:0.000520s ]
